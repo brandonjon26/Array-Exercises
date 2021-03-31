@@ -22,3 +22,14 @@ export let getStudentNames = () => {
     <h2>Cohort 43</h2>
   </div>
 */
+export let StudentList = () => {
+  let newArray = students.map(obj => {
+    return `
+    <div>
+    <h1>${obj.firstName} ${obj.lastName}</h1>
+    <h2>Cohort ${obj.cohort}</h2>
+    </div>
+    `
+  })
+  return newArray.join("");
+}
